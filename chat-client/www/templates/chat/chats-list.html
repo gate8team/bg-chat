@@ -1,0 +1,13 @@
+<ion-view view-title="My Chats">
+  <ion-content>
+    <div class="content ionic-pseudo">
+      <div class="list">
+        <a class="item item-avatar" ng-repeat="chat in chats" href="#">
+          <img ng-src="{{chat.image}}">
+          <h2>{{chat.name}}</h2>
+          <p>{{chat.lastMessage}}</p>
+        </a>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

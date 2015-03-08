@@ -4,7 +4,7 @@
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
 // 'starter.controllers' is found in controllers.js
-angular.module('starter', ['ionic', 'starter.controllers', 'bgChat.services'])
+angular.module('starter', ['ionic', 'starter.controllers', 'bgChat.services', 'bgChat.controllers'])
 
   .run(function ($ionicPlatform)
   {
@@ -31,6 +31,16 @@ angular.module('starter', ['ionic', 'starter.controllers', 'bgChat.services'])
         abstract: true,
         templateUrl: "templates/menu.html",
         controller: 'AppCtrl'
+      })
+      // chats here
+      .state('app.chats', {
+        url: "/chats",
+        views: {
+          'menuContent': {
+            templateUrl: 'templates/chat/chats-list.html',
+            controller: 'ChatsController'
+          }
+        }
       })
 
       .state('app.search', {
@@ -71,5 +81,5 @@ angular.module('starter', ['ionic', 'starter.controllers', 'bgChat.services'])
         }
       });
     // if none of the above states are matched, use this as the fallback
-    $urlRouterProvider.otherwise('/app/playlists');
+    $urlRouterProvider.otherwise('/app/chats');
   });
