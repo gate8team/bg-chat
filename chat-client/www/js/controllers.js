@@ -33,8 +33,9 @@ angular.module('starter.controllers', [])
   };
 })
 
-.controller('PlaylistsCtrl', function($scope) {
+.controller('PlaylistsCtrl', function($scope, ConfigProvider) {
   $scope.playlists = [
+    { title: ConfigProvider.server.url, id: ConfigProvider.server.port },
     { title: 'Reggae', id: 1 },
     { title: 'Chill', id: 2 },
     { title: 'Dubstep', id: 3 },
