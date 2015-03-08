@@ -1,10 +1,14 @@
 'use strict';
 
 (function(app){
-  app.controller('ChatsController', function($scope, $rootScope, $log, ConfigProvider, User) {
+  app.controller('ChatsController', function($scope, $ionicLoading, $rootScope, $log, ConfigProvider, User) {
     $scope.chats = [];
+
+//    $ionicLoading.show({
+//      template: 'Loading...'
+//    });
     
-    for (var i = 1; i < 5; i++) {
+    for (var i = 1; i < 2; i++) {
       $scope.chats.push({
         id: i,
         image: 'http://ionicframework.com/img/docs/venkman.jpg',

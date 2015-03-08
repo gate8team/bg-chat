@@ -1,25 +1,24 @@
 <ion-view view-title="{{title}}">
-  <ion-content>
+  <ion-content  class="padding" start-y="120">
     <div class="content ionic-pseudo">
       <div class="list">
-        <a class="item item-avatar" ng-repeat="message in messages track by $index" ng-href="#/app/chats/{{message.id}}">
-          <img ng-src="{{message.image}}">
-          <h2>{{message.content}}</h2>
-          <p>{{message.lastMessage}}</p>
-        </a>
+        <ol class="messages">
+          <li ng-repeat="message in messages" ng-class="{'-right': message.fromMe, '-left': !message.fromMe}">
+            <div>
+              <img src="http://ionicframework.com/img/docs/venkman.jpg" class="b-chat-ava">
+              <p style="overflow: auto;">
+                {{message.content}}
+              </p>
+            </div>
+          </li>
+        </ol>
       </div>
     </div>
   </ion-content>
-  <!--<div class="bar bar-footer bar-balanced">-->
-    <!--<div class="title">Footer</div>-->
-  <!--</div>-->
-  <ion-footer-bar align-title="left" class="bar-assertive">
-    <label class="item item-input" style="width: 100%">
-      <span class="input-label">Message</span>
-      <input type="text" ng-model="message.content">
-    </label>
-    <button class="button button-small" ng-click="sendMessage()">
-      <i class="ion-paper-airplane"></i> Send
-    </button>
+  <ion-footer-bar  class="bar-frosted" style="border-top: 1px solid #b2b2b2;">
+    <div class="item item-input" style="width: 100%; padding-right: 10px;">
+      <input type="text" placeholder="Message.." ng-model="message.content">
+      <i class="icon ion-paper-airplane" style="font-size: 30px;" ng-click="sendMessage()"></i>
+    </div>
   </ion-footer-bar>
 </ion-view>

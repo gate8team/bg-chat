@@ -5,8 +5,7 @@
     $provide.factory('ConfigProvider', function () {
       return {
         server: {
-          url: 'localhost',
-          port: '8000'
+          url: 'localhost:8000'
         }
       };
     });

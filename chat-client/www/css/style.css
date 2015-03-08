@@ -1,1 +1,57 @@
 /* Empty. Add your own CSS if you like */
+.messages {
+  margin:0;
+  padding:0;
+  list-style-type:none;
+}
+
+.messages li {
+  display:block;
+  clear:both;
+  max-width:50%;
+  margin:0 0 1rem 0;
+  padding:0;
+}
+
+.messages li.-left {
+  float: left;
+}
+
+.messages li.-right {
+  float:right;
+}
+
+.messages li.-left img {
+  float: left;
+  margin: 0 10px 0 0;
+}
+
+.messages li.-right img {
+  float:right;
+  margin: 0 0 0 10px;
+}
+
+.messages p {
+  border-radius:.2rem;
+  background:#e6e5eb;
+  color:#383641;
+  padding:.6875rem;
+  margin:0;
+  font-size:.875rem;
+}
+
+.messages li.-right p {
+  background:#158ffe;
+  color:#fff;
+}
+
+.messages img {
+  display:block;
+  max-width:65%;
+}
+
+.b-chat-ava {
+  width: 42px;
+  height: 42px;
+  border-radius: 1.5rem;
+}
