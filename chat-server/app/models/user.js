@@ -10,4 +10,4 @@ var User = Waterline.Collection.extend({
   }
 });
 
-module.exports.User = User;
+module.exports = User;

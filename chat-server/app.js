@@ -6,11 +6,15 @@ var app = require('express')(),
   Waterline = require('waterline'),
   models = require('./app/models/index.js');
 
-database.entity.loadCollection(models.user.User);
+// Load up all models
+for (var modelName in models) {
+  database.entity.loadCollection(models[modelName]);
+}
 
+// Init the db connection
 database.initialize(function(err, models) {
-  if(err) throw err;
-
+  if (err) throw err;
+  
   server.models = models.collections;
   server.connections = models.connections;
 
