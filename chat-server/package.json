@@ -1,0 +1,15 @@
+{
+  "name": "chat-server",
+  "version": "0.0.1",
+  "description": "BG real time chat server app",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Anton Shabanov (me.antony.rain@gmail.com)",
+  "license": "ISC",
+  "dependencies": {
+    "express": "~4.12.2",
+    "socket.io": "~1.3.5"
+  }
+}
