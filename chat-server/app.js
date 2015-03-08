@@ -3,7 +3,6 @@ var app = require('express')(),
   server = require('http').Server(app),
   io = require('socket.io')(server),
   database = require('./config/database.js').database,
-  Waterline = require('waterline'),
   models = require('./app/models/index.js');
 
 // Load up all models
@@ -20,8 +19,15 @@ database.initialize(function(err, models) {
 
   io.on('connection', function (socket) {
     socket.on('event:new:message', function (data) {
-      console.log(data);
-      socket.broadcast.emit('event:incoming:message', data);
+      // when new message comes, lets create a new record..
+      server.models.chat_message.create(data, function(err, message) {
+        if (err == null) {
+          console.log(message);
+          socket.broadcast.emit('event:incoming:message', message);
+        } else {
+          console.log(err);
+        }
+      });
     });
   });
 

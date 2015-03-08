@@ -45,6 +45,14 @@
   color:#fff;
 }
 
+.messages li.-left small {
+  float: right;
+}
+
+.messages li.-right small {
+  float: left;
+}
+
 .messages img {
   display:block;
   max-width:65%;
