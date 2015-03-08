@@ -2,7 +2,7 @@
   <ion-content>
     <div class="content ionic-pseudo">
       <div class="list">
-        <a class="item item-avatar" ng-repeat="chat in chats" href="#">
+        <a class="item item-avatar" ng-repeat="chat in chats" ng-href="#/app/chats/{{chat.id}}">
           <img ng-src="{{chat.image}}">
           <h2>{{chat.name}}</h2>
           <p>{{chat.lastMessage}}</p>

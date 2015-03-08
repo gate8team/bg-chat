@@ -42,6 +42,16 @@ angular.module('starter', ['ionic', 'starter.controllers', 'bgChat.services', 'b
           }
         }
       })
+      // single chat here
+      .state('app.singleChat', {
+        url: '/chats/:id',
+        views: {
+          'menuContent': {
+            templateUrl: 'templates/chat/chat.html',
+            controller: 'ChatController'
+          }
+        }
+      })
 
       .state('app.search', {
         url: "/search",
