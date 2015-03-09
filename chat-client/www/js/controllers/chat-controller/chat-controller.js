@@ -14,6 +14,7 @@
     ChatMessage.loadMessages(function(data) {
       $scope.messages = data;
       $ionicLoading.hide();
+      $ionicScrollDelegate.scrollBottom(true);
     });
     
     var socket = io(ConfigProvider.server.url);
