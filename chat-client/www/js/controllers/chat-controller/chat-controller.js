@@ -8,7 +8,7 @@
     $scope.message = {};
 
     $ionicLoading.show({
-      template: 'Loading...'
+      template: '<ion-spinner icon="lines"></ion-spinner>'
     });
     
     ChatMessage.loadMessages(function(data) {
