@@ -47,3 +47,8 @@ database.initialize(function(err, models) {
     console.log('Socket.io Running');
   });
 });
+
+// To create users
+//app.models.user.create({login: 'admin', password: '1234'}, function(err, user) {
+//
+//});
