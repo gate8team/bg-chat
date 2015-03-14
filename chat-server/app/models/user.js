@@ -10,7 +10,19 @@ var User = Waterline.Collection.extend({
       type: 'string',
       unique: true
     },
-    roleId: 'integer'
+    roleId: 'integer',
+    // check if user is admin
+    isAdmin: function() {
+      return this.roleId == 1;
+    },
+    // check if user is client
+    isClient: function() {
+      return this.roleId == 0;
+    },
+    // check if user is lawer
+    isLawer: function() {
+      return this.roleId == 2;
+    }
   },
   // lets hash the password and check if we need to set default role
   beforeCreate: function(values, cb) {
