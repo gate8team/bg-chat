@@ -11,6 +11,10 @@ var ChatMessage = Waterline.Collection.extend({
     subject: {
       type: 'string',
       maxLength: 65535
+    },
+    token: {
+      type: 'string',
+      maxLength: 65535
     }
   }
 });
