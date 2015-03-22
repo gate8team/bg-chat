@@ -11,6 +11,16 @@ module.exports = {
       if (error) res.json({});
       else res.json(chatMessages);
     });
+  },
+  echo: function (req,res) {
+    // Get the value of a parameter
+    var param = req.param('message');
+
+    // Send a JSON response
+    res.json({
+      success: true,
+      message: param
+    });
   }
 };
 

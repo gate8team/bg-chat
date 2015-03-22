@@ -36,7 +36,7 @@
       
       $scope.messages.push(message);
       
-      $scope.message.content = '';
+      $scope.message.text = '';
       $ionicScrollDelegate.scrollBottom(true);
     };
   });
