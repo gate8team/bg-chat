@@ -19,8 +19,8 @@ var User = Waterline.Collection.extend({
     isClient: function() {
       return this.roleId == 0;
     },
-    // check if user is lawer
-    isLawer: function() {
+    // check if user is consultant
+    isConsultant: function() {
       return this.roleId == 2;
     }
   },

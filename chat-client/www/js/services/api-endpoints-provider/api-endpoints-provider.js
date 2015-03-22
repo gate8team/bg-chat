@@ -7,7 +7,7 @@
         messages: {
           all: {
             type: 'get',
-            path: ConfigProvider.server.url + '/api/messages/'
+            path: ConfigProvider.server.url + '/api/v1/messages/'
           }
         }
       };

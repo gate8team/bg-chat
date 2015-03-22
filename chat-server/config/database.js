@@ -1,6 +1,6 @@
 var Waterline = require('waterline'),
     mysqlAdapter = require('sails-mysql'),
-    connections = require('./connections.js').connections,
+    connections = require('./index.js').get('database:connections'),
     orm = new Waterline();
 
 var config = {
