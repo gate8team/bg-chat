@@ -34,7 +34,9 @@ module.exports.routes = {
 
   '/': {
     view: 'homepage'
-  }
+  },
+
+  'get /api/v1/messages/': 'V1/MessageController.index'
 
   /***************************************************************************
   *                                                                          *
