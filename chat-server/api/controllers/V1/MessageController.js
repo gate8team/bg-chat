@@ -7,7 +7,7 @@
 
 module.exports = {
 	index: function(req, res) {
-    Message.find().exec(function(error, chatMessages) {
+    Message.find().limit(20).exec(function(error, chatMessages) {
       if (error) res.json({});
       else res.json(chatMessages);
     });

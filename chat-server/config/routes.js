@@ -37,7 +37,8 @@ module.exports.routes = {
   },
 
   'get /api/v1/messages/': 'V1/MessageController.index',
-  'get /api/v1/messages/echo/': 'V1/MessageController.echo'
+  'get /api/v1/messages/echo/': 'V1/MessageController.echo',
+  'post /api/auth/register': 'AuthController.register'
 
   /***************************************************************************
   *                                                                          *
